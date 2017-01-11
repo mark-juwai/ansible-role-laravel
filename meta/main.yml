@@ -3,7 +3,7 @@ galaxy_info:
   description: Prepare for Laravel installation
   company: Juwai Limited
   license: MIT
-  min_ansible_version: 1.9
+  min_ansible_version: 2.1
   platforms:
   - name: EL
     versions:
@@ -13,4 +13,4 @@ galaxy_info:
   #   - 2013.09
   galaxy_tags: [amazon, centos6, nginx, php, laravel]
 dependencies:
-  - role: retr0h.logrotate
+  - { role: retr0h.logrotate,2.0, when: laravel_rotate_nginx_log }
